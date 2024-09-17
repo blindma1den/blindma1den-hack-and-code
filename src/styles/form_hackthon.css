@@ -1,0 +1,18 @@
+.hackathon__icon__container {
+    background-image: radial-gradient(circle at center, #6A1A7E, #222);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.error-message {
+    color: #666FCF;
+}
+
+.register-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15rem;
+}

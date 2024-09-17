@@ -1,0 +1,36 @@
+#info {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    text-align: center;
+}
+
+.info-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin: 40px 0 10px 0;
+}
+
+.info-card {
+    background-color: var(--bg-primary);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.info-description {
+    padding: 1rem;
+}
+
+.info-action {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1023px) {
+    .info-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

@@ -1,0 +1,205 @@
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: var(--primary);
+    background: rgba(50, 50, 50, 0.95);
+    backdrop-filter: blur(20px);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-icon {
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.header-icon a {
+    text-decoration: none;
+}
+
+.header-menu ul {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    list-style: none;
+    align-items: center;
+}
+
+.header-menu ul li a {
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.header-menu ul li.active a,
+.header-menu ul li a:hover {
+    color: var(--secondary);
+    transition: 0.5s;
+    letter-spacing: 1px;
+
+}
+
+.navigation {
+    display: none;
+}
+
+/* Styles for tablet screens */
+@media (max-width: 1023px) {
+
+    .navigation {
+        display: block;
+    }
+
+    .navigation__checkbox {
+        display: none;
+    }
+
+    .navigation__button {
+        background-color: var(--secondary);
+        height: 6rem;
+        width: 6rem;
+        position: fixed;
+        top: 1rem;
+        right: 6rem;
+        border-radius: 50%;
+        z-index: 2000;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .header-menu {
+        display: none;
+    }
+
+    .navigation__background {
+        position: fixed;
+        top: 1.5rem;
+        right: 6.5rem;
+        z-index: 1000;
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50%;
+        background: radial-gradient(#1A237E, #1C2361, #222);
+        z-index: 1000;
+        transition: transform 0.8s;
+        /* transform: scale(50); */
+    }
+
+    .navigation__nav {
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1500;
+
+        opacity: 0;
+        width: 0;
+        transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .navigation__list {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    .navigation__item {
+        margin: 2rem;
+    }
+
+    .navigation__link:visited,
+    .navigation__link:link,
+    .navigation__link {
+        display: inline-block;
+        font-size: 3rem;
+        font-weight: 300;
+        color: var(--primary);
+        text-decoration: none;
+        transition: all 0.3s;
+        padding: 1rem 2rem;
+        background-image: linear-gradient(120deg, transparent 0%, transparent 50%, var(--primary) 50%);
+        background-size: 240%;
+        transition: all .4s;
+
+    }
+
+    .navigation__link:hover,
+    .navigation__link:active {
+        background-position: 100%;
+        color: #1A237E;
+        transform: translateX(1rem);
+    }
+
+    /* FUNCTIONALITY */
+    .navigation__checkbox:checked~.navigation__background {
+        transform: scale(80);
+    }
+
+    .navigation__checkbox:checked~.navigation__nav {
+        opacity: 1;
+        width: 100%;
+    }
+
+    /* ICON */
+    .navigation__icon {
+        position: relative;
+    }
+
+    .navigation__icon,
+    .navigation__icon::before,
+    .navigation__icon::after {
+        width: 3rem;
+        height: .2rem;
+        background-color: var(--primary);
+        display: inline-block;
+    }
+
+    .navigation__icon::before,
+    .navigation__icon::after {
+        content: "";
+        position: absolute;
+        left: 0;
+    }
+
+    .navigation__icon::before {
+        top: 1rem;
+        /* transform-origin: right; */
+    }
+
+    .navigation__icon::after {
+        top: 2rem;
+    }
+
+    /* .navigation__button:hover
+    .navigation__icon::before{
+        top: -1rem;
+    }
+
+    .navigation__button:hover
+    .navigation__icon::before{
+        top: .1rem;
+    } */
+    .navigation__checkbox:checked+.navigation__button .navigation__icon {
+        background: transparent;
+    }
+
+    .navigation__checkbox:checked+.navigation__button .navigation__icon::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    .navigation__checkbox:checked+.navigation__button .navigation__icon::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+}
