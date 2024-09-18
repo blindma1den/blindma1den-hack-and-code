@@ -19,6 +19,11 @@
 
 .sponsor-icon {
     width: 100%;
+    height: auto;
+}
+
+.sponsor-link {
+    width: 100%;
 }
 
 .sponsor-icon-3-rem {
