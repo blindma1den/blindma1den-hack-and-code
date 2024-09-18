@@ -19,6 +19,11 @@
 
 .sponsor-icon {
     width: 100%;
+    height: auto;
+}
+
+.sponsor-link {
+    width: 100%;
 }
 
 .sponsor-icon-3-rem {
@@ -35,5 +40,9 @@
 @media (max-width: 767px) {
     .sponsors-container {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .sponsor-link {
+        width: 70%;
     }
 }
