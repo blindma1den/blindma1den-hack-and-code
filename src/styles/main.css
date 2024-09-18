@@ -55,9 +55,6 @@ section {
 }
 /* Media query for mobile devices */
 @media (max-width: 480px) {
-    body{
-        background-color: red;
-    }
     .h1{
         font-size: 5rem;
     }
