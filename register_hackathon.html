@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
@@ -16,182 +16,182 @@
 </head>
 
 <body>
-    <header>
-        <div class="header-icon">
-            <a href="./index.html">
-                <span class="gradient">Blindma1den</span>
-            </a>
-        </div>
+<header>
+    <div class="header-icon">
+        <a href="./index.html">
+            <span class="gradient">Blindma1den</span>
+        </a>
+    </div>
 
-        <nav class="header-menu">
-            <ul>
-                <li class="active"><a href="./index.html#home">Inicio</a></li>
-                <li><a href="./index.html#services">Evento</a></li>
-                <li><a href="./index.html#info">Actividades</a></li>
-                <li><a href="./index.html#sponsors">Sponsors</a></li>
-                <li><a href="./index.html#faq">FAQ</a></li>
-                <li><a href="./index.html#contact-us">Contacto</a></li>
+    <nav class="header-menu">
+        <ul>
+            <li class="active"><a href="./index.html#home">Inicio</a></li>
+            <li><a href="./index.html#services">Evento</a></li>
+            <li><a href="./index.html#info">Actividades</a></li>
+            <li><a href="./index.html#sponsors">Sponsors</a></li>
+            <li><a href="./index.html#faq">FAQ</a></li>
+            <li><a href="./index.html#contact-us">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="navigation">
+        <input type=checkbox class="navigation__checkbox" id="navi__togle">
+
+        <label for="navi__togle" class="navigation__button">
+            <span class="navigation__icon"></span>
+        </label>
+
+        <div class="navigation__background">&nbsp</div>
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#home" class="navigation__link">Inicio</a></li>
+                <li class="navigation__item"><a href="#services" class="navigation__link">Evento</a></li>
+                <li class="navigation__item"><a href="#info" class="navigation__link">Actividades</a></li>
+                <li class="navigation__item"><a href="#sponsors" class="navigation__link">Sponsors</a></li>
+                <li class="navigation__item"><a href="#faq" class="navigation__link">FAQ</a></li>
+                <li class="navigation__item"><a href="#contact-us" class="navigation__link">Contacto</a></li>
             </ul>
         </nav>
-        <div class="navigation">
-            <input type=checkbox class="navigation__checkbox" id="navi__togle">
+    </div>
+</header>
 
-            <label for="navi__togle" class="navigation__button">
-                <span class="navigation__icon"></span>
-            </label>
-
-            <div class="navigation__background">&nbsp</div>
-            <nav class="navigation__nav">
-                <ul class="navigation__list">
-                    <li class="navigation__item"><a href="#home" class="navigation__link">Inicio</a></li>
-                    <li class="navigation__item"><a href="#services" class="navigation__link">Evento</a></li>
-                    <li class="navigation__item"><a href="#info" class="navigation__link">Actividades</a></li>
-                    <li class="navigation__item"><a href="#sponsors" class="navigation__link">Sponsors</a></li>
-                    <li class="navigation__item"><a href="#faq" class="navigation__link">FAQ</a></li>
-                    <li class="navigation__item"><a href="#contact-us" class="navigation__link">Contacto</a></li>
-                </ul>
-            </nav>
+<main>
+    <section id="hero__hackathon" class="container">
+        <div class="row register-row">
+            <h1 class="h1 gradient">¡Compite en equipo y gana premios!</h1>
+            <img src="./src/img/hero_2.svg" alt="hackathon icon">
         </div>
-    </header>
+    </section>
 
-    <main>
-        <section id="hero__hackathon" class="container">
-            <div class="row register-row">
-                <h1 class="h1 gradient">¡Compite en equipo y gana premios!</h1>
-                <img src="./src/img/hero_2.svg" alt="hackathon icon">
+    <section id="form__hackathon" class="container">
+        <div class="row">
+            <h2 class="h2">Tu aventura comienza aquí</h2>
+            <p class="mt-5">Rellena este formulario para participar en hackathon o CTF y nos pondremos en
+                contacto
+                contigo. La participación tiene un costo de <strong>25 USD</strong> por persona y contarás con
+                una
+                sesión de mentoría
+                ¿Estás listo? ¡Vamos!</p>
+        </div>
+
+        <div class="row form__container">
+            <div class="col-12 col-md-6">
+                <form action="payments.php" id="registerForm" method="POST">
+                    <div class="row form-item">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" autocomplete="name">
+                        <span id="nameError" class="error-message"></span>
+                    </div>
+
+                    <div class="row form-item">
+                        <label for="lastname">Apellido</label>
+                        <input type="text" id="lastname" name="lastname">
+                        <span id="lastnameError" class="error-message"></span>
+                    </div>
+
+                    <div class="row form-item">
+                        <label for="username">Username de X</label>
+                        <input type="text" id="username" name="username" value="@">
+                        <span id="usernameError" class="error-message"></span>
+                    </div>
+
+                    <div class="row form-item">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" autocomplete="email">
+                        <span id="emailError" class="error-message"></span>
+                    </div>
+
+                    <div class="row form-item">
+                        <label for="hackathonCtf">¿Hackathon o CTF?</label>
+                        <select name="hackathonCtf" id="hackathonCtf">
+                            <option value="hackathon">Hackathon</option>
+                            <option value="ctf" selected>CTF</option>
+                        </select>
+                        <span id="hackathonCtfError" class="error-message"></span>
+
+                    </div>
+
+                    <div class="row form-item">
+                        <label for="teamName">Nombre de tu equipo</label>
+                        <input type="text" id="teamName" name="teamName">
+                        <span id="teamNameError" class="error-message"></span>
+
+                    </div>
+
+                    <div class="row form-item">
+                        <label for="teamMemberNum">Número de integrantes (Max 3)</label>
+                        <input type="number" id="teamMemberNum" name="teamMemberNum">
+                        <span id="teamMemberNumError" class="error-message"></span>
+                    </div>
+
+                    <div class="row form-item">
+                        <label for="country">País de residencia</label>
+                        <input type="text" name="country" id="country">
+                        <span id="countryError" class="error-message"></span>
+
+                    </div>
+
+                    <div class="row form-item mt-5 mb-5">
+                        <button type="submit" class="btn btn-secondary">Enviar</button>
+                    </div>
+
+                </form>
             </div>
-        </section>
 
-        <section id="form__hackathon" class="container">
-            <div class="row">
-                <h2 class="h2">Tu aventura comienza aquí</h2>
-                <p class="mt-5">Rellena este formulario para participar en hackathon o CTF y nos pondremos en
-                    contacto
-                    contigo. La participación tiene un costo de <strong>25 USD</strong> por persona y contarás con
-                    una
-                    sesión de mentoría
-                    ¿Estás listo? ¡Vamos!</p>
+            <div class="col-12 col-md-6 hackathon__icon__container">
+                <img src="./src/img/hero_2_typing.svg" alt="typing icon ">
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-content container">
+        <div class="row">
+            <div class="copyrights col-12 col-md-4">
+                <p>Blindma1den Hack & Code</p>
+                <p>Copyright© 2024</p>
             </div>
 
-            <div class="row form__container">
-                <div class="col-12 col-md-6">
-                    <form action="register.php" id="registerForm" method="POST">
-                        <div class="row form-item">
-                            <label for="name">Nombre</label>
-                            <input type="text" id="name" name="name" autocomplete="name">
-                            <span id="nameError" class="error-message"></span>
-                        </div>
-
-                        <div class="row form-item">
-                            <label for="lastname">Apellido</label>
-                            <input type="text" id="lastname" name="lastname">
-                            <span id="lastnameError" class="error-message"></span>
-                        </div>
-
-                        <div class="row form-item">
-                            <label for="username">Username de X</label>
-                            <input type="text" id="username" name="username" value="@">
-                            <span id="usernameError" class="error-message"></span>
-                        </div>
-
-                        <div class="row form-item">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" autocomplete="email">
-                            <span id="emailError" class="error-message"></span>
-                        </div>
-
-                        <div class="row form-item">
-                            <label for="hackathonCtf">¿Hackathon o CTF?</label>
-                            <select name="hackathonCtf" id="hackathonCtf">
-                                <option value="hackathon">Hackathon</option>
-                                <option value="ctf" selected>CTF</option>
-                            </select>
-                            <span id="hackathonCtfError" class="error-message"></span>
-
-                        </div>
-
-                        <div class="row form-item">
-                            <label for="teamName">Nombre de tu equipo</label>
-                            <input type="text" id="teamName" name="teamName">
-                            <span id="teamNameError" class="error-message"></span>
-
-                        </div>
-
-                        <div class="row form-item">
-                            <label for="teamMemberNum">Número de integrantes (Max 3)</label>
-                            <input type="number" id="teamMemberNum" name="teamMemberNum">
-                            <span id="teamMemberNumError" class="error-message"></span>
-                        </div>
-
-                        <div class="row form-item">
-                            <label for="country">País de residencia</label>
-                            <input type="text" name="country" id="country">
-                            <span id="countryError" class="error-message"></span>
-
-                        </div>
-
-                        <div class="row form-item mt-5 mb-5">
-                            <button type="submit" class="btn btn-secondary">Enviar</button>
-                        </div>
-
-                    </form>
-                </div>
-
-                <div class="col-12 col-md-6 hackathon__icon__container">
-                    <img src="./src/img/hero_2_typing.svg" alt="typing icon ">
-                </div>
+            <div class="footer-logo col-12 col-md-4">
+                <h1 class="gradient">Blindma1den</h2>
             </div>
-        </section>
-    </main>
 
-    <footer>
-        <div class="footer-content container">
-            <div class="row">
-                <div class="copyrights col-12 col-md-4">
-                    <p>Blindma1den Hack & Code</p>
-                    <p>Copyright© 2024</p>
+            <div class="footer-social col-12 col-md-4">
+                <div class="footer-icon col">
+                    <a href="https://x.com/blindma1den" target="_blank">
+                        <i class="bi bi-twitter"></i>
+                    </a>
                 </div>
-
-                <div class="footer-logo col-12 col-md-4">
-                    <h1 class="gradient">Blindma1den</h2>
+                <div class="footer-icon col">
+                    <a href="#" target="_blank">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
                 </div>
-
-                <div class="footer-social col-12 col-md-4">
-                    <div class="footer-icon col">
-                        <a href="https://x.com/blindma1den" target="_blank">
-                            <i class="bi bi-twitter"></i>
-                        </a>
-                    </div>
-                    <div class="footer-icon col">
-                        <a href="#" target="_blank">
-                            <i class="bi bi-linkedin"></i>
-                        </a>
-                    </div>
-                    <div class="footer-icon col">
-                        <a href="#" target="_blank">
-                            <i class="bi bi-instagram"></i>
-                        </a>
-                    </div>
-                    <div class="footer-icon col">
-                        <a href="#">
-                            <i class="bi bi-envelope"></i>
-                        </a>
-                    </div>
+                <div class="footer-icon col">
+                    <a href="#" target="_blank">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </div>
+                <div class="footer-icon col">
+                    <a href="#">
+                        <i class="bi bi-envelope"></i>
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="footer-developers container pt-3">
-            <p>Made with ❤️ by: <a href="https://x.com/SnowCardenas" target="_blank" class="footer-link">SnowDev</a>
-            </p>
-        </div>
+    </div>
+    <div class="footer-developers container pt-3">
+        <p>Made with ❤️ by: <a href="https://x.com/SnowCardenas" target="_blank" class="footer-link">SnowDev</a>
+        </p>
+    </div>
 
-    </footer>
+</footer>
 
-    <script src="./src/js/register.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+<script src="./src/js/register.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 
